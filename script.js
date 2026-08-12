@@ -293,7 +293,12 @@ The customer has selected these L'Oréal products for their routine. Use this in
     }
 
     const data = await response.json();
-    const aiResponse = data.choices[0].message.content;
+
+    if (!data.message) {
+    throw new Error("Worker did not return a message: " + JSON.stringify(data));
+}
+
+    const aiResponse = data.message;
 
     /* Add AI response to message history */
     messages.push({
@@ -393,7 +398,12 @@ chatForm.addEventListener("submit", async (e) => {
     }
 
     const data = await response.json();
-    const aiResponse = data.choices[0].message.content;
+
+    if (!data.message) {
+    throw new Error("Worker did not return a message: " + JSON.stringify(data));
+}
+
+    const aiResponse = data.message;
 
     /* Add AI response to message history */
     messages.push({
