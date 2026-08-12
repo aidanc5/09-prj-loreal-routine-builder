@@ -13,8 +13,8 @@ let selectedProducts = [];
 /* Keep track of conversation history for follow-up questions */
 let messages = [];
 
-/* Cloudflare Worker URL - students should replace with their own */
-const WORKER_URL = "https://loreal-routine.your-subdomain.workers.dev/";
+/* Cloudflare Worker URL - calls the Worker that handles OpenAI requests */
+const WORKER_URL = "https://loreal.calverta2.workers.dev/";
 
 /* localStorage key for persisting selected products */
 const STORAGE_KEY = "loreal_selected_products";

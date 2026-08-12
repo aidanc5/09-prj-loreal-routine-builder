@@ -1,0 +1,7 @@
+name = "loreal-routine"
+main = "worker.js"
+compatibility_date = "2024-12-19"
+type = "service"
+
+[env.production]
+route = "loreal.calverta2.workers.dev/*"
