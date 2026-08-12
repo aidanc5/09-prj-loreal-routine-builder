@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -44,7 +44,23 @@
 
       <!-- Selected Products -->
       <div class="selected-products">
-        <h2>Selected Products</h2>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <h2>Selected Products</h2>
+          <button
+            id="clearAllBtn"
+            class="clear-all-btn"
+            type="button"
+            title="Clear all selected products"
+          >
+            <i class="fa-solid fa-trash"></i> Clear All
+          </button>
+        </div>
         <div id="selectedProductsList"></div>
         <button id="generateRoutine" class="generate-btn">
           <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
@@ -62,7 +78,7 @@
             id="userInput"
             name="userInput"
             type="text"
-            placeholder="Ask me about products or routines…"
+            placeholder="Ask about skincare, application tips, product combinations…"
             autocomplete="off"
             required
           />
@@ -71,6 +87,12 @@
             <span class="visually-hidden">Send</span>
           </button>
         </form>
+        <div class="chat-form-hint">
+          💡 Ask about
+          <strong
+            >skincare, haircare, makeup, fragrance, or routine tips</strong
+          >
+        </div>
       </section>
 
       <!------- Footer Links ------->
